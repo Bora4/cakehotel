@@ -13,6 +13,7 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
+                    <th><?= $this->Paginator->sort('age') ?></th>
                     <th><?= $this->Paginator->sort('room_id') ?></th>
                     <th><?= $this->Paginator->sort('entry_date') ?></th>
                     <th><?= $this->Paginator->sort('departure_date') ?></th>
@@ -22,8 +23,9 @@
             <tbody>
                 <?php foreach ($guests as $guest): ?>
                 <tr>
-                <td><?= $this->Number->format($guest->id) ?></td>
+                    <td><?= $this->Number->format($guest->id) ?></td>
                     <td><?= h($guest->name) ?></td>
+                    <td><?= $this->Number->format($guest->age) ?></td>
                     <td><?= $guest->has('room') ? $this->Html->link($guest->room->name, ['controller' => 'Rooms', 'action' => 'view', $guest->room->id]) : '' ?></td>
                     <td><?= h($guest->entry_date) ?></td>
                     <td><?= h($guest->departure_date) ?></td>

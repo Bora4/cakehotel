@@ -24,6 +24,7 @@
                 <legend><?= __('Edit Guest') ?></legend>
                 <?php
                     echo $this->Form->control('name');
+                    echo $this->Form->control('age');
                     echo $this->Form->control('room_id', ['options' => $rooms]);
                     echo $this->Form->control('entry_date');
                     echo $this->Form->control('departure_date');
@@ -34,3 +35,4 @@
         </div>
     </div>
 </div>
+

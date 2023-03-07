@@ -31,6 +31,10 @@
                     <td><?= $this->Number->format($guest->id) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Age') ?></th>
+                    <td><?= $this->Number->format($guest->age) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Entry Date') ?></th>
                     <td><?= h($guest->entry_date) ?></td>
                 </tr>
@@ -111,6 +115,7 @@
                             <th><?= __('Guest Id') ?></th>
                             <th><?= __('Request Type') ?></th>
                             <th><?= __('Food Id') ?></th>
+                            <th><?= __('Employee Id') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
                         <?php foreach ($guest->requests as $requests) : ?>
@@ -119,6 +124,7 @@
                             <td><?= h($requests->guest_id) ?></td>
                             <td><?= h($requests->request_type) ?></td>
                             <td><?= h($requests->food_id) ?></td>
+                            <td><?= h($requests->employee_id) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Requests', 'action' => 'view', $requests->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Requests', 'action' => 'edit', $requests->id]) ?>

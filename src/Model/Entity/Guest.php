@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
+ * @property int $age
  * @property int $room_id
  * @property \Cake\I18n\FrozenDate $entry_date
  * @property \Cake\I18n\FrozenDate $departure_date
@@ -32,6 +33,7 @@ class Guest extends Entity
      */
     protected $_accessible = [
         'name' => true,
+        'age' => true,
         'room_id' => true,
         'entry_date' => true,
         'departure_date' => true,

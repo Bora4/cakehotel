@@ -17,13 +17,17 @@
         <div class="oldGuests view content">
             <h3><?= h($oldGuest->id) ?></h3>
             <table>
-                <tr>
+            <tr>
                     <th><?= __('Guest Name') ?></th>
                     <td><?= h($oldGuest->guest_name) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($oldGuest->id) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Guest Age') ?></th>
+                    <td><?= $this->Number->format($oldGuest->guest_age) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Guest Room Id') ?></th>

@@ -11,8 +11,9 @@
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
+                <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('guest_name') ?></th>
+                    <th><?= $this->Paginator->sort('guest_age') ?></th>
                     <th><?= $this->Paginator->sort('guest_room_id') ?></th>
                     <th><?= $this->Paginator->sort('guest_entry_date') ?></th>
                     <th><?= $this->Paginator->sort('guest_departure_date') ?></th>
@@ -22,8 +23,9 @@
             <tbody>
                 <?php foreach ($oldGuests as $oldGuest): ?>
                 <tr>
-                    <td><?= $this->Number->format($oldGuest->id) ?></td>
+                <td><?= $this->Number->format($oldGuest->id) ?></td>
                     <td><?= h($oldGuest->guest_name) ?></td>
+                    <td><?= $this->Number->format($oldGuest->guest_age) ?></td>
                     <td><?= $this->Number->format($oldGuest->guest_room_id) ?></td>
                     <td><?= h($oldGuest->guest_entry_date) ?></td>
                     <td><?= h($oldGuest->guest_departure_date) ?></td>

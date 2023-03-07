@@ -65,7 +65,7 @@ class OldGuestsController extends AppController
         $this->request->getSession()->write('departing_guest_id', null);
         $guests = $this->getTableLocator()->get('Guests');
         $departing_guest = $guests->get($departing_guest_id);
-        $arr = array('guest_id' => $departing_guest['id'], 'guest_name' => $departing_guest['name'], 'guest_age' => '0', 'guest_room_id' => $departing_guest['room_id'], 'guest_entry_date' => $departing_guest['entry_date'], 'guest_departure_date' => $departing_guest['departure_date'], 'guest' => $departing_guest);   
+        $arr = array('guest_id' => $departing_guest['id'], 'guest_name' => $departing_guest['name'], 'guest_age' => $departing_guest['age'], 'guest_room_id' => $departing_guest['room_id'], 'guest_entry_date' => $departing_guest['entry_date'], 'guest_departure_date' => $departing_guest['departure_date'], 'guest' => $departing_guest);   
         // patchEntity fonksiyonu array istedigi icin $departing_guest Entitysinin icindeki verileri bir arraya aktardim.
         // bunu yapmanin muhtemelen daha pratik bir yolu vardir
         $oldGuest = $this->OldGuests->patchEntity($oldGuest, $arr);

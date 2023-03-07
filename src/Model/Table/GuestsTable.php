@@ -76,6 +76,11 @@ class GuestsTable extends Table
             ->notEmptyString('name');
 
         $validator
+            ->integer('age')
+            ->requirePresence('age', 'create')
+            ->notEmptyString('age');
+
+        $validator
             ->integer('room_id')
             ->notEmptyString('room_id');
 

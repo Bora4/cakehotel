@@ -26,7 +26,7 @@
                     echo $this->Form->control('guest_id', ['options' => $guests]);
                     echo $this->Form->control('guest_name');
                     echo $this->Form->control('guest_age');
-                    echo $this->Form->control('guest_room_id');
+                    echo $this->Form->control('guest_room_id', ['type' => 'number']);
                     echo $this->Form->control('guest_entry_date');
                     echo $this->Form->control('guest_departure_date');
                 ?>
