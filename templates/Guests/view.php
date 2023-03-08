@@ -71,41 +71,6 @@
                 <?php endif; ?>
             </div>
             <div class="related">
-                <h4><?= __('Related Old Guests') ?></h4>
-                <?php if (!empty($guest->old_guests)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Guest Id') ?></th>
-                            <th><?= __('Guest Name') ?></th>
-                            <th><?= __('Guest Age') ?></th>
-                            <th><?= __('Guest Room Id') ?></th>
-                            <th><?= __('Guest Entry Date') ?></th>
-                            <th><?= __('Guest Departure Date') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($guest->old_guests as $oldGuests) : ?>
-                        <tr>
-                            <td><?= h($oldGuests->id) ?></td>
-                            <td><?= h($oldGuests->guest_id) ?></td>
-                            <td><?= h($oldGuests->guest_name) ?></td>
-                            <td><?= h($oldGuests->guest_age) ?></td>
-                            <td><?= h($oldGuests->guest_room_id) ?></td>
-                            <td><?= h($oldGuests->guest_entry_date) ?></td>
-                            <td><?= h($oldGuests->guest_departure_date) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'OldGuests', 'action' => 'view', $oldGuests->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'OldGuests', 'action' => 'edit', $oldGuests->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'OldGuests', 'action' => 'delete', $oldGuests->id], ['confirm' => __('Are you sure you want to delete # {0}?', $oldGuests->id)]) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
-            <div class="related">
                 <h4><?= __('Related Requests') ?></h4>
                 <?php if (!empty($guest->requests)) : ?>
                 <div class="table-responsive">
